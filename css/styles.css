@@ -65,9 +65,22 @@ a {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
-}
+    transition: margin 0.15s; /* slow down arrow movement */
+} 
 
 /* Add arrow after link */
 .link-arrow::after {
+    margin-left: 5px;
     content: "-->"
+}
+
+/* Arrow movement hover effect */
+.link-arrow:hover::after {
+    margin-left: 10px
+}
+
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
+    }
 }
