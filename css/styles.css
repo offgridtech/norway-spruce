@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
@@ -5,8 +6,10 @@
     --color-headings: #1b0760; /* dark purple */
     --color-body: #918c84; /* light grey with shade of purple/blue */
 }
-
-/* Typography */
+/* *~~~--------------------------------------~~~* */
+/* *------~~~------*|TYPOGRAPHY|*------~~~------* */
+/* *~~~--------------------------------------~~~* */
+/* Standardized for rem */
 html {
     font-size: 62.5%;
 }
@@ -39,7 +42,7 @@ p {
     margin-top: 0;
 }
 
-/* We're doing a mobile first approach, so here we are styling bigger screens */
+/* Larger screens */
 @media screen and (min-width: 1024px) {
     body {
         font-size: 1.8rem;
@@ -54,17 +57,18 @@ p {
         font-size:  2.4rem;
     }
 }
-
-/* Links */
+/* *~~~---------------------------------~~~* */
+/* *------~~~------*|LINKS|*------~~~------* */
+/* *~~~---------------------------------~~~* */
 a {
     text-decoration: none;
 }
 
 .link-arrow {
     color: var(--color-accent);
-    text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
+    text-transform: uppercase;
     transition: margin 0.15s; /* slow down arrow movement */
 } 
 
@@ -79,8 +83,48 @@ a {
     margin-left: 10px
 }
 
+/* Larger screens - decreases sizing */
 @media screen and (min-width: 1024px) {
     .link-arrow {
         font-size: 1.5rem;
+    }
+}
+
+/* *~~~----------------------------------~~~* */
+/* *------~~~------*|BADGES|*------~~~------* */
+/* *~~~----------------------------------~~~* */
+
+.badge {
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    white-space: nowrap; /* keep content on a single line */
+}
+
+/* Primary badge color */
+.badge--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+/* Secondary badge color */
+.badge--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+/* Small version */
+.badge--small {
+    font-size: 1.6rem;
+}
+
+/* Larger screens - decreases sizing */
+@media screen and (min-width: 1024px) {
+    .badge {
+        font-size: 1.5rem;
+    }
+    .badge--small {
+        font-size: 1.2rem;
     }
 }

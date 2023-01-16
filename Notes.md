@@ -15,3 +15,5 @@ For the Norway Spruce page, let's make green the primary color with different sh
 ## Minimize the Number of Fonts
 
 Page load times decreases when you have less stuff loading, so stick with the least amount of font styles possible. Every variation of a font becomes a separate font file, so keep everything simple and minimal.
+
+One thing to note is that variable font files have multiple types of a font included in only one file. Something to look for so you make less HTTP requests, and also you can link multiple font types without increasing size.
