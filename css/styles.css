@@ -149,13 +149,13 @@ a {
     margin-right: 2rem;
 }
 
-/* Apply checkmarks to list items */
+/* Applying checkmarks to list items */
 .list--checked {
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem; /* brings svg check on the screen */ 
 }
 
-/* Space between checkmark and text */
+/* List item spacing*/
 .list--checked .list__item {
     padding-left: 0.5rem; 
     margin-bottom: 1rem;
@@ -181,7 +181,7 @@ a {
     fill: var(--color-primary)
 }
 
-/* Outside <span> */
+/* Parent <span> */
 .icon-container {
     background: #f3f9fa;
     border-radius: 100%;
@@ -210,7 +210,7 @@ a {
     
 }
 
-/* Inline Buttons */
+/* Inline buttons */
 .btn--primary {
     background: var(--color-primary);
     color: #fff;
@@ -257,8 +257,34 @@ a {
 
 }
 
+/* Larger screens */
 @media screen and (min-width: 1024px) {
     .btn {
+        font-size: 1.5rem;
+    }
+}
+
+/* *~~~----------------------------------~~~* */
+/* *------~~~------*|INPUTS|*------~~~------* */
+/* *~~~----------------------------------~~~* */
+
+.input {
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    color: var(--color-headings);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+}
+
+/* Change color of placeholder text */
+::placeholder {
+    color: #cbcdd7;
+}
+
+/* Larger screens */
+@media screen and (min-width: 1024px) {
+    .input {
         font-size: 1.5rem;
     }
 }
