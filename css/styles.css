@@ -162,3 +162,26 @@ a {
         padding-left: 0;
     }
 }
+
+/* *~~~---------------------------------~~~* */
+/* *------~~~------*|ICONS|*------~~~------* */
+/* *~~~---------------------------------~~~* */
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+.icon--primary {
+    fill: var(--color-primary)
+}
+
+.icon-container {
+    background: #f3f9fa;
+    border-radius: 100%;
+    display: inline-flex;
+    width: 64px;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+}
