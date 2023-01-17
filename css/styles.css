@@ -3,8 +3,10 @@
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
     --color-accent: #ff3400;
-    --color-headings: #1b0760; /* dark purple */
-    --color-body: #918c84; /* light grey with shade of purple/blue */
+    --color-headings: #1b0760; 
+    --color-body: #918c84; 
+    --color-border: #ccc;
+    --border-radius: 30px;
 }
 
 *, *::before, *::after {
@@ -269,8 +271,8 @@ a {
 /* *~~~----------------------------------~~~* */
 
 .input {
-    border-radius: 30px;
-    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
     color: var(--color-headings);
     font-size: 2rem;
     outline: 0;
@@ -280,6 +282,23 @@ a {
 /* Change color of placeholder text */
 ::placeholder {
     color: #cbcdd7;
+}
+
+/* Container of input + button */
+.input-group {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex;
+}
+
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+    margin: 4px;
 }
 
 /* Larger screens */
