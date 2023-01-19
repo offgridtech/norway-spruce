@@ -608,3 +608,42 @@ a {
     margin: 0 2rem;
   }
 }
+
+/* *~~~----------------------------------------~~~* */
+/* *------~~~------*|COLLAPSIBLES|*------~~~------* */
+/* *~~~----------------------------------------~~~* */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+/* Chevron pointing right */
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+/* Hides minimized collapsible content */
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s, opacity 0.3s;
+}
+
+/* Chevron pointing down */
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+/* Animate and expand visible content */
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
