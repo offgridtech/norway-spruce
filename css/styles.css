@@ -17,6 +17,16 @@
   box-sizing: border-box;
 }
 
+/* *~~~------------------------------------------~~~* */
+/* *------~~~------*|GLOBAL/REUSABLE|*------~~~------* */
+/* *~~~------------------------------------------~~~* */
+
+/* Squeezes a container, and centers it by applying even margin on both sides.  Applied to block components*/
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 /* *~~~--------------------------------------~~~* */
 /* *------~~~------*|TYPOGRAPHY|*------~~~------* */
 /* *~~~--------------------------------------~~~* */
@@ -646,4 +656,111 @@ a {
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
+}
+
+/* *~~~----------------------------------~~~* */
+/* *------~~~------*|BLOCKS|*------~~~------* */
+/* *~~~----------------------------------~~~* */
+
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+  text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
+.block--dark .block__heading {
+  color: #fff;
+}
+
+/* CSS clip paths */
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+/* *~~~-----------------------------------~~~* */
+/* *------~~~------*|NAV BAR|*------~~~------* */
+/* *~~~-----------------------------------~~~* */
+
+.nav {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+/* Put list on second line with help of above flex-wrap */
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.nav__item > a {
+  color: #d2d0db;
+  transition: color 0.25s;
+}
+
+/* Hover event brightens anchors */
+.nav__item > a:hover {
+  color: #fff;
+}
+
+/* Toggler dimmed when not expanded */
+.nav__toggler {
+  opacity: 0.5;
+  transition: opacity 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Brightens navigation toggler & adds shadow upon expansion */
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+/* Pushes the logo down a bit */
+.nav__brand {
+  transform: translateY(5px);
+}
+
+/* Larger screens */
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%; /* always visible */
+    opacity: 1; /* always visible */
+  }
+  .nav__item {
+    border: 0;
+  }
 }
