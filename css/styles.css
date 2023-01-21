@@ -21,7 +21,7 @@
 /* *------~~~------*|GLOBAL/REUSABLE|*------~~~------* */
 /* *~~~------------------------------------------~~~* */
 
-/* Squeezes a container, and centers it by applying even margin on both sides.  Applied to block components*/
+/* Constrains a container, and centers it by applying even margin on both sides.  Applied to block components*/
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -236,10 +236,19 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+/* Icons inside of buttons */
+.btn .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle; /* vertically centers button */
 }
 
 /* Inline buttons */
@@ -328,7 +337,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -797,6 +806,33 @@ a {
   }
 }
 
-/* *~~~-----------------------------------~~~* */
-/* *------~~~------*|??? BLOCK|*------~~~------* */
-/* *~~~-----------------------------------~~~* */
+/* *~~~----------------------------------------~~~* */
+/* *------~~~------*|DOMAIN BLOCK|*------~~~------* */
+/* *~~~----------------------------------------~~~* */
+
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  /* Contrain size of search bar */
+  margin: 4rem auto;
+  max-width: 650px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  /* Constrain price list */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    /* Autofit n # of grid items between a column range of 100px and 1fr.   */
+  }
+}
