@@ -382,9 +382,9 @@ a {
 }
 
 /* Plan badge primary */
-/* .card-primary .badge-primary {
-    background: var(--color-secondary);
-} */
+.card--primary .badge--primary {
+  background: #126de4;
+}
 
 /* *~~~---------------------------------~~~* */
 /* *------~~~------*|PLANS|*------~~~------* */
@@ -420,6 +420,10 @@ a {
   letter-spacing: 1px;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 /* Applying the popular badge */
 .plan--popular .card__header {
   position: relative;
@@ -439,11 +443,9 @@ a {
   .plan__name {
     font-size: 1.4rem;
   }
-
   .plan__price {
     font-size: 5rem;
   }
-
   .plan__billing-cycle {
     font-size: 1.6rem;
   }
@@ -835,4 +837,30 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     /* Autofit n # of grid items between a column range of 100px and 1fr.   */
   }
+}
+
+/* *~~~---------------------------------------~~~* */
+/* *------~~~------*|PLANS BLOCK|*------~~~------* */
+/* *~~~---------------------------------------~~~* */
+
+/* Gaps between cards */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+/* Constrain card width & centers it to never be more than 500px.  Fixes tablet size w/out media query. */
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.plan {
+  transition: transform 0.4s ease-out;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
