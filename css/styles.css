@@ -923,6 +923,79 @@ a {
   }
 }
 
-/* *~~~---------------------------------------------~~~* */
-/* *------~~~------*|TESTIMONIAL BLOCK|*------~~~------* */
-/* *~~~---------------------------------------------~~~* */
+/* *~~~----------------------------------~~~* */
+/* *------~~~------*|FOOTER|*------~~~------* */
+/* *~~~----------------------------------~~~* */
+
+/* Mobile - single column with togglers hiding content */
+.footer {
+  background: #232323;
+}
+
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__brand {
+  text-align: center;
+  margin-top: 5rem;
+  width
+}
+
+/* TODO: Consider refactoring this and applying 100% width to all imgs or img {width: 100%} */
+.footer__brand img {
+  width: 100%;
+  max-width: 230px; /* don't go beyond this though */
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer .list {
+  margin: 0;
+}
+
+/* Larger screens - several columns & no togglers (show all content) */
+@media screen and (min-width: 768px) {
+  .footer__all-sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .footer .collapsible__chevron {
+    display: none;
+  }
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+  .footer__brand {
+    order: -1;
+    margin-top: 1.3rem;
+  }
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+  .footer__section {
+    border: 0;
+  }
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+}
