@@ -22,6 +22,10 @@ One thing to note is that variable font files have multiple types of a font incl
 
 Import normalize.css into your main CSS file at the top using @import "./normalize.css". The less links you have in the markup, the faster it will be. During the build process with Parcel, it will combine the CSS file and normalize.
 
+## Use the W3 Validation Tool
+
+You copy and paste or attach your HTML and CSS, and it will tell you what you need to know to fix it. Do this before performing a build and deploying to production. The better your code is as per the validator, the higher ranking you will get in search engines.
+
 ## Use a Build Tool (Parcel)
 
 Build a Parcel local development server to test using the CLI with `node_modules/.bin/parcel index.html`, and see how it looks on your local machine. Then, do a production build with `node_modules/.bin/parcel build index.html` to remove all the comments, spacing, etc, from all of your files, and then it will dump new optimized files into .dist.
